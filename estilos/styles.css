@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*********************************Aplicamos estilos al NAV*************************************/
+
+body{
+    background-color: #eaf2e3;
+    font-family: 'Oswald', sans-serif;
+}
+
+
+
+h1{
+    font-size: 3rem;
+    text-shadow: 4px 4px 5px;
+    font-weight: bold;
+    color: #eb7f1b;
+}
+
+.secciones{
+    border: #c7ba99 1px solid;
+    background-color: rgba(252, 126, 0, 0.61);
+    border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.secciones:hover{
+    transform:scale(1.2);
+    background-color: #eb7f1b;
+}
+
+.active{
+    background-color: #eb7f1b;
+
+}
+
+/*****Aplicando estilos al MAIN*****/
+
+p{
+    margin: 10px;
+    font-size: 1.5rem;
+}
+
+.contenedorMain {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sec2, .sec4{
+    width: 500px;
+    overflow: hidden;
+}
+.contenedorMain img{
+    width: 500px;
+    border-radius: 10px;
+    border: #eb7f1b solid 3px;
+    border-image: linear-gradient(45deg, red, lime, blue) 1;
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.contenedorMain img:hover{
+    transform: scale(1.2);
+}
+
+
+/*****Aplicamos estilos al FOOTER*****/
+
+.contenedorFooter{
+    border-top: #eb7f1b 1px solid;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.contenedorRedesSociales{
+    display: flex;
+    gap:20px;
+    justify-content: center;
+
+}
+
+.iconoRedSocial{
+    padding-top: 10px;
+}
+
+.contenedorRedesSociales img{
+    width: 40px;
+}
+
+.contenedorSubtitle{
+    font-family: 'Playpen Sans', cursive;
+    font-weight: bold;
+    font-size: 1rem
+}
+
+/**************************************************Estilos de la page Shop************************************************************/
+
+
+.contenedorCards{
+
+    display: grid;
+
+
+}
+
