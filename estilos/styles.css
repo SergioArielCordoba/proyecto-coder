@@ -103,11 +103,17 @@ p{
 
 /**************************************************Estilos de la page Shop************************************************************/
 
-
-.contenedorCards{
-
-    display: grid;
-
-
+.miImagen{
+    width: 500px;
+    height: 500px;
+    border: #eb7f1b 2px solid;
 }
 
+
+.contenedorCards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 40px;
+}
