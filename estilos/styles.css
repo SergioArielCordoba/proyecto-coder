@@ -17,7 +17,7 @@ h1{
     font-size: 3rem;
     text-shadow: 4px 4px 5px;
     font-weight: bold;
-    color: #eb7f1b;
+    color: rgba(252, 126, 0, 0.61);
 }
 
 .secciones{
@@ -36,6 +36,11 @@ h1{
 .active{
     background-color: #eb7f1b;
 
+}
+
+h1:hover{
+    color:#eb7f1b;
+    ;
 }
 
 /*****Aplicando estilos al MAIN*****/
