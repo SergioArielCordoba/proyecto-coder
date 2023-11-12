@@ -142,6 +142,7 @@ p{
 
 .contenedorTaller{
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     justify-content:center;
 }
@@ -156,11 +157,12 @@ p{
 }
 
 .miSlider{
-    width: 50%;
-    height: 50%;
-
- 
-
+    margin: 30px;
+}
+.miSlider img {
+    width: 100vh;
+    height: 50vh;
+    object-fit: cover;
 }
 
 /****************************Media Queries/****************************/
@@ -203,12 +205,8 @@ p{
         border: #eb7f1b solid 3px;
         border-image: linear-gradient(45deg, red, lime, blue) 1;
     }
-
-
     .sec2, .sec4{
         width: 75%;
         overflow: hidden;
     }
-
-
 }
