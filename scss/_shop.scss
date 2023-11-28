@@ -1,0 +1,33 @@
+/*Estilos a la shop.*/
+
+.contenedorCards{
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+
+    .miCard, .primerCard{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .miImagen{
+            width: 60%;
+            height: 100%;
+            border-radius: 10px;
+            border: $color-btn-secundary solid 3px;
+        }
+        .miBoton{
+            width: 100px;
+            height: 80px;
+            margin-top: 5px;
+            @include colorBotones;
+            color: black;
+            font-size: 1.5rem;
+            border-radius: 5px;
+        }
+    
+    }
+
+}

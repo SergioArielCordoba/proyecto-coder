@@ -1,304 +1,341 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/*Funciones y variables*/
+/*Reset de la pagina*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/*********************************Aplicamos estilos al NAV para todas las pages*********************************/
-
-body{
-    background-color: #eaf2e3;
-    font-family: 'Oswald', sans-serif;
+/*Estilos al body*/
+body {
+  background-image: linear-gradient(to right, #fefae0, #dda15e);
+  font-family: "Oswald", sans-serif;
+}
+body h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+body h2 {
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Oswald", sans-serif;
+}
+body h3 {
+  font-weight: bold;
+  font-size: 2.5rem;
+}
+body p {
+  margin: 10px;
+  font-size: 2rem;
 }
 
-h1{
-    font-size: 3rem;
-    text-shadow: 4px 4px 5px;
-    font-weight: bold;
-    color: rgba(252, 126, 0, 0.61);
+/*Estilos al nav*/
+@keyframes sliderLogo {
+  from {
+    margin-left: 500%;
+  }
+  to {
+    margin-left: 0%;
+  }
+}
+header a img {
+  width: 90%;
+  animation-duration: 2s;
+  animation-name: sliderLogo;
+}
+header a.secciones {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+header a.secciones:hover {
+  transform: scale(1.2);
+  text-decoration: underline;
+}
+header a.active {
+  text-decoration: underline;
+}
+header .botonMenu {
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 
-h2{
-    text-align: center;
-    font-size: 2.5rem;
-    font-family: 'Times New Roman', Times, serif;
-    color: #eb7f1b;
+/*Estilos para el Footer*/
+@keyframes textoFooter {
+  0% {
+    color: rgb(43, 31, 31);
+  }
+  25% {
+    color: #dda15e;
+  }
+  50% {
+    color: #606c38;
+  }
+  75% {
+    color: #bc6c25;
+  }
+  100% {
+    color: #fefae0;
+  }
+}
+.contenedorFooter {
+  padding-bottom: 10px;
+  text-align: center;
+  background-color: #fefae0;
+}
+.contenedorFooter div .micopyright {
+  animation-name: textoFooter;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.contenedorFooter div img {
+  margin-top: 10px;
+  width: 250px;
+}
+.contenedorFooter .contenedorRedesSociales {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+}
+.contenedorFooter .contenedorRedesSociales a {
+  text-decoration: none;
+  color: black;
 }
 
-h3{
-    font-weight: bold;
-    font-size: 2rem;
-}
-
-.secciones{
-    border: #c7ba99 1px solid;
-    background-color: rgba(252, 126, 0, 0.61);
-    border-radius: 3px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.secciones:hover{
-    transform:scale(1.2);
-    background-color: #eb7f1b;
-}
-
-.active{
-    background-color: #eb7f1b;
-
-}
-
-h1:hover{
-    color:#eb7f1b;
-    ;
-}
-
-/*********************************Aplicamos estilos al FOOTER para todas las pages*********************************/
-
-.contenedorFooter{
-    border-top: #eb7f1b 1px solid;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    margin-top: 10px;
-    text-align: center;
-}
-
-.contenedorRedesSociales{
-    display: flex;
-    gap:20px;
-    justify-content: center;
-
-}
-
-.iconoRedSocial{
-    padding-top: 10px;
-}
-
-.contenedorRedesSociales img{
-    width: 40px;
-}
-
-.contenedorSubtitle{
-    font-family: 'Playpen Sans', cursive;
-    font-weight: bold;
-    font-size: 1rem
-}
-
-/*********************************Aplicando estilos al HOME*********************************/
-
-p{
-    margin: 10px;
-    font-size: 1.5rem;
-}
-
+/*Estilos al index*/
 .contenedorMain {
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contenedorMain .sec2, .contenedorMain .sec4 {
+  width: 40%;
+  overflow: hidden;
+  border-radius: 10px;
+  border: solid 3px #bc6c25;
+}
+.contenedorMain img {
+  width: 100%;
+  transition: 0.5s;
+}
+.contenedorMain img:hover {
+  transform: scale(1.2);
 }
 
-.sec2, .sec4{
-    width: 50%;
-    overflow: hidden;
+/*Estilos a la shop.*/
+.contenedorCards {
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
 }
-.contenedorMain img{
-    width: 100%;
-    border-radius: 10px;
-    border: #eb7f1b solid 3px;
-    border-image: linear-gradient(45deg, red, lime, blue) 1;
-    transition: 0.5s;
-    object-fit: cover;
+.contenedorCards .miCard, .contenedorCards .primerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-.contenedorMain img:hover{
-    transform: scale(1.2);
+.contenedorCards .miCard .miImagen, .contenedorCards .primerCard .miImagen {
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+  border: #bc6c25 solid 3px;
 }
-
-/*********************************Estilos de la page Shop*********************************/
-.miBoton{
-    width: 80px;
-    height: 30px;
-    margin-top: 5px;
-    background-color: rgb(174, 175, 175);
-    color: black;
-    font-weight: bold;
-}
-
-.miImagen{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    border: #eb7f1b solid 3px;
-    border-image: linear-gradient(45deg, red, lime, blue) 1;
+.contenedorCards .miCard .miBoton, .contenedorCards .primerCard .miBoton {
+  width: 100px;
+  height: 80px;
+  margin-top: 5px;
+  background-image: linear-gradient(to right, #606c38, #bc6c25);
+  color: black;
+  font-size: 1.5rem;
+  border-radius: 5px;
 }
 
-.contenedorCards{
-    padding: 25px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-    
+/*Aplico estilos a la page Taller*/
+.contenedorTaller {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
-.miCard, .primerCard{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-/*********************************Aplicando estilos a page TALLER*********************************/
-
-.contenedorTaller{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content:center;
+.contenedorTaller img {
+  width: 100%;
+  height: 100%;
 }
 
-.contenedorTaller img{
-    width: 100%;
-    height: 100%;
+.miCardTaller {
+  text-align: center;
 }
 
-.miCardTaller{
-    text-align: center;
-}
-
-.miSlider{
-    margin: 10px;
+.miSlider {
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .miSlider img {
-    width: 100vh;
-    height: 50vh;
-    object-fit: cover;
-    overflow: auto;
+  width: 100vh;
+  height: 50vh;
+  object-fit: cover;
+  overflow: auto;
 }
 
-/*********************************Aplicando estilos a page CONTACTO*********************************/
-.miFormulario{
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
-    align-items: center;
-
+/*Aplico estilos a la pagina Contacto*/
+.miFormulario {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  row-gap: 5px;
+  align-items: center;
+}
+.miFormulario .miBoton {
+  width: 150px;
+  height: auto;
+  background-image: linear-gradient(to right, #606c38, #bc6c25);
+  font-size: 1.5rem;
+}
+.miFormulario input {
+  width: 40vw;
+  border: rgb(43, 31, 31) solid 1px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #fefae0, #dda15e);
+  font-size: 2rem;
+}
+.miFormulario textarea {
+  width: 40vw;
+  border: rgb(43, 31, 31) solid 1px;
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #fefae0, #dda15e);
+  font-size: 2rem;
 }
 
-label{
+/*Aplico estilos a la pagina ubicacion*/
+.miMapa {
+  text-align: center;
+}
+
+.miHorario .diasYHorarios, .miHorario h2 {
+  text-align: center;
+  font-size: 1rem;
+}
+.miHorario h2 {
+  font-weight: bold;
+}
+
+/*Aplico query medias*/
+@media (max-width: 585px) {
+  /*Aplica a todas las paginas del proyecto*/
+  body h1 {
+    margin-top: 15px;
+    font-size: 1.8rem;
+  }
+  body h2 {
     font-size: 1.5rem;
-    font-weight: bolder;
-}
-
-.miBoton{
-    width: 150px;
-    height: auto;
-    background-color: #eb7f1b;
-    font-size: 1.5rem;
-}
-
-input,textarea{
-    width: 40vw;
-    border: #eb7f1b solid 1px;
+  }
+  body h3 {
+    font-size: 1.3rem;
+  }
+  body p {
+    font-size: 1.2rem;
+  }
+  header .logoNav {
+    width: 70%;
+  }
+  /*Aplica a todas las paginas del proyecto*/
+  .contenedorFooter div img {
+    margin-top: 10px;
+    width: 200px;
+  }
+  /*Aplica solo a la pagina Index*/
+  .contenedorMain .sec2,
+  .contenedorMain .sec4 {
+    width: 94%;
+    overflow: hidden;
+  }
+  /*Aplica solo a la pagina Shop*/
+  .contenedorCards {
+    display: grid;
+    grid-template-columns: 75%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+  }
+  .contenedorCards .miCard .miImagen,
+  .contenedorCards .primerCard .miImagen {
+    width: 100%;
+    height: 100%;
+  }
+  /*Aplica solo a la pagina contacto*/
+  .miFormulario input,
+  .miFormulario textarea {
+    width: 90vw;
+    border: rgb(43, 31, 31) solid 1px;
     border-radius: 5px;
-    background-color:#eaf2e3;
+    background-image: linear-gradient(to right, #fefae0, #dda15e);
     font-size: 2rem;
+  }
+  /*Aplica solo a la pagina ubicacion*/
+  .miMapa iframe {
+    width: 90%;
+  }
+}
+@media (min-width: 586px) and (max-width: 883px) {
+  /*Aplica a todas las paginas del proyecto*/
+  body h1 {
+    font-size: 3rem;
+  }
+  body h2 {
+    font-size: 2.5rem;
+  }
+  body h3 {
+    font-size: 2rem;
+  }
+  body p {
+    font-size: 1.8rem;
+  }
+  /*Aplica solo a la pagina Index*/
+  .contenedorMain .sec2,
+  .contenedorMain .sec4 {
+    width: 80%;
+    overflow: hidden;
+  }
+  /*Aplica solo a la pagina Shop*/
+  .contenedorCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+  }
+  .contenedorCards .miCard .miImagen,
+  .contenedorCards .primerCard .miImagen {
+    width: 90%;
+    height: 100%;
+  }
+  /*Aplica solo a la pagina contacto*/
+  .miFormulario input,
+  .miFormulario textarea {
+    width: 90vw;
+    border: rgb(43, 31, 31) solid 1px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #fefae0, #dda15e);
+    font-size: 2rem;
+  }
+  /*Aplica solo a la pagina ubicacion*/
+  .miMapa iframe {
+    width: 80%;
+  }
+}
+@media (min-width: 884px) and (max-width: 1600px) {
+  /*Aplica solo a la pagina contacto*/
+  .miFormulario input,
+  .miFormulario textarea {
+    width: 70vw;
+    border: rgb(43, 31, 31) solid 1px;
+    border-radius: 5px;
+    font-size: 2rem;
+  }
 }
 
-/*********************************Aplicando estilos a page UBICACION*********************************/
-
-.miMapa{
-    text-align: center;
-}
-
-.miHorario h4, .miHorario p{
-    text-align: center;
-    font-size: 1rem;
-}
-
-h4{
-    font-weight: bold;
-}
-
-/*********************************Media Query/*********************************/
-
-@media (max-width: 600px){
-    .contenedorCards{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    .miImagen{
-        width: 100%;
-        height: 100%;
-        border-radius: 3px;
-        border: #eb7f1b solid 3px;
-        border-image: linear-gradient(45deg, red, lime, blue) 1;
-    }
-
-    .sec2, .sec4{
-        width: 100%;
-        overflow: hidden;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-
-    .miMapa iframe{
-        width: 90vw;
-        text-align: center;
-    }
-
-    h2{
-        text-align: center;
-        font-size: 1.5rem;
-        font-family: 'Times New Roman', Times, serif;
-        color: #eb7f1b;
-    }
-    
-    h3{
-        font-weight: bold;
-        font-size: 1rem;
-    }
-
-
-}
-
-@media (min-width:601px) and (max-width: 989px){
-
-    .contenedorCards{
-        padding: 25px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
-    .miImagen{
-        width: 100%;
-        height: 100%;
-        border-radius: 6px;
-        border: #eb7f1b solid 3px;
-        border-image: linear-gradient(45deg, red, lime, blue) 1;
-    }
-    .sec2, .sec4{
-        width: 75%;
-        overflow: hidden;
-    }
-}
-
-@media(max-width: 1299px){
-    input,textarea{
-        width: 90vw;
-        border: #eb7f1b solid 1px;
-        border-radius: 5px;
-        background-color:#eaf2e3;
-        font-size: 1.5rem;
-    }
-}
-
-@media(min-width: 1300px) and (max-width: 1600px){
-    input,textarea{
-        width: 70vw;
-        border: #eb7f1b solid 1px;
-        border-radius: 5px;
-        background-color:#eaf2e3;
-        font-size: 2rem;
-    }
-}
+/*# sourceMappingURL=styles.css.map */

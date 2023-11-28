@@ -1,0 +1,18 @@
+/*Aplico estilos a la pagina ubicacion*/
+
+.miMapa {
+    text-align: center;
+}
+
+.miHorario {
+    .diasYHorarios {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    h2 {
+        font-weight: bold;
+        @extend .diasYHorarios;
+    }
+
+}

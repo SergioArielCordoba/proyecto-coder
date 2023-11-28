@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sobre Dos Ruedas!</title>
+    <meta name="description"
+        content="La mejor experienda para el ciclista, visita nuestra tienda online con las mejores ofertas.">
     <!--CSS BOOTSTRAP-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -12,24 +14,26 @@
     <link rel="stylesheet" href="estilos/styles.css">
     <!--SHORTCUT ICONO-->
     <link rel="shortcut icon" href="media/icon.png" type="image/x-icon">
-    <!--FONTS PLAYPEN SANS Y OSWALD-->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Playpen+Sans:wght@500&display=swap');
-    </style>
-
+    <!--FONTS PT Sefit Y OSWALD-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&family=PT+Serif&display=swap"
+        rel="stylesheet">
+    <!--ICON BS Redes Sociales-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 </head>
 
 <body>
     <header>
         <!--NAV BS-->
         <nav class="navbar navbar-expand-lg p-0">
-            <div class="container-fluid p-0">
-                <a class="navbar-brand" href="index.html">
-                    <h1>Sobre Dos Ruedas</h1>
+            <div class="container-fluid p-0 ">
+                <a class="navbar-brand logoNav" href="index.html">
+                    <img src="media/Captura-removebg-preview.png" alt="Logo de Sobre dos ruedas">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="botonMenu">Menu</span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
@@ -37,7 +41,7 @@
                             <a class="nav-link secciones" href="html/shop.html">Shop</a>
                         </li>
                         <li class="nav-item px-1 pb-1">
-                            <a class="nav-link secciones" href="html/taller.html">Taller/Reparaciones</a>
+                            <a class="nav-link secciones" href="html/taller.html">Taller</a>
                         </li>
                         <li class="nav-item px-1 pb-1">
                             <a class="nav-link secciones" href="html/contacto.html">Contacto</a>
@@ -50,7 +54,9 @@
             </div>
         </nav>
     </header>
+    
     <main class="contenedorMain">
+        <h1>Sobre Nosotros</h1>
         <div class="sec1">
             <p>
                 En <strong>Sobre Dos Ruedas</strong>, ofrecemos una amplia gama de productos de
@@ -86,25 +92,34 @@
         </div>
     </main>
 
-    <!-- Aplicar FLEX en contenedorRedesSociales-->
-
     <footer class="contenedorFooter">
-
-        <div class="contenedorSubtitle">
-            <h2> Visitas Nuestas redes sociales</h2>
+        <div>
+            <img src="media/Captura-removebg-preview.png" alt="Logo">
         </div>
+
+        <div>
+            <p class="micopyright">Copyright © 2023 Sobre Dos Ruedas, Inc.</p>
+        </div>
+
 
         <div class="contenedorRedesSociales">
-            <div class="iconoRedSocial"> <a href="https://www.facebook.com/" target="_blank"> <img
-                        src="media/icono_Facebook.png" alt="imagen facebook"></a> </div>
-            <div class="iconoRedSocial"> <a href="https://www.instagram.com/" target="_blank"> <img
-                        src="media/icono_Instagram.png" alt="imagen instagram"></a> </div>
-            <div class="iconoRedSocial"> <a href="https://www.twitter.com/" target="_blank"> <img
-                        src="media/icono_Twitter.png" alt="imagen twitter"></a> </div>
-            <div class="iconoRedSocial"> <a href="https://web.whatsapp.com/" target="_blank"> <img
-                        src="media/icono_Wsp.png" alt="imagen whassap"></a> </div>
-        </div>
+            <a href="https://www.facebook.com/" target="_blank">
+                <i class="bi bi-facebook"></i>
+            </a>
 
+            <a href="https://www.instagram.com/" target="_blank">
+                <i class="bi bi-instagram"></i>
+            </a>
+
+            <a href="https://web.whatsapp.com/" target="_blank">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+
+            <a href="https://www.twitter.com/" target="_blank">
+                <i class="bi bi-twitter-x"></i>
+            </a>
+
+        </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

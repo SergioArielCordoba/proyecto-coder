@@ -1,0 +1,44 @@
+/*Estilos al nav*/
+@keyframes sliderLogo {
+  from {
+    margin-left: 500%;
+    
+  }
+  to {
+    margin-left: 0%;
+    
+  }
+}
+
+header{
+  a {
+    img{
+      width: 90%;
+      animation-duration: 2s;
+      animation-name: sliderLogo;
+    }
+  &.secciones {
+    //border-radius: 3px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    &:hover {
+      transform: scale(1.2);
+      text-decoration: underline;
+    }
+  }
+
+  &.active {
+    text-decoration: underline;
+  }
+
+}
+.botonMenu {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+}
+
+

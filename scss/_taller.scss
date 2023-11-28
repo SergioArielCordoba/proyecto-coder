@@ -1,0 +1,32 @@
+/*Aplico estilos a la page Taller*/
+
+.contenedorTaller {
+
+    @include miFlex(row,wrap);
+
+    gap: 10px;
+    justify-content: center;
+  
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .miCardTaller {
+    text-align: center;
+  }
+  
+  .miSlider {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+  
+    img {
+      width: 100vh;
+      height: 50vh;
+      object-fit: cover;
+      overflow: auto;
+    }
+  }
+  

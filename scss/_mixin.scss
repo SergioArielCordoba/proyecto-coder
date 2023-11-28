@@ -1,0 +1,19 @@
+/*Funciones y variables*/
+
+$color-primary: rgb(43, 31, 31);
+$color-btn-primary:#606c38;
+$color-btn-secundary: #bc6c25;
+$color-background-uno: #fefae0;
+$color-background-dos:#dda15e;
+
+@mixin miFlex($flex-direction,$wrap){
+    display: flex;
+    flex-direction: $flex-direction;
+    flex-wrap: $wrap;
+}
+@mixin miBackground{
+    background-image: linear-gradient(to right,$color-background-uno,$color-background-dos);
+}
+@mixin colorBotones{
+    background-image: linear-gradient(to right,$color-btn-primary,$color-btn-secundary);
+}

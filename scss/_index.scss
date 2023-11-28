@@ -1,0 +1,23 @@
+/*Estilos al index*/
+.contenedorMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    .sec2, .sec4 {
+      width: 40%;
+      overflow: hidden;
+      border-radius: 10px;
+      border: solid 3px $color-btn-secundary;
+      
+
+    }
+    img {
+      width: 100%;
+      transition: 0.5s;
+      &:hover{
+        transform:scale(1.2);
+      }
+    }
+}
+  

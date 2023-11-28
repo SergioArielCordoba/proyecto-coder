@@ -1,0 +1,32 @@
+
+
+
+/*Estilos al body*/
+
+body {
+  @include miBackground;
+  font-family: 'Oswald', sans-serif;
+
+  h1 {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  h3 {
+    font-weight: bold;
+    font-size: 2.5rem;
+  }
+
+  p {
+    margin: 10px;
+    font-size: 2rem;
+  }
+
+}

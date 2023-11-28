@@ -1,0 +1,185 @@
+/*Aplico query medias*/
+
+@media (max-width: 585px) {
+
+  /*Aplica a todas las paginas del proyecto*/
+  body {
+    h1 {
+      margin-top: 15px;
+      font-size: 1.8rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+  }
+
+  header {
+    .logoNav {
+      width: 70%;
+    }
+  }
+  /*Aplica a todas las paginas del proyecto*/
+
+  .contenedorFooter {
+    div{
+      img{
+        margin-top: 10px;
+        width: 200px;
+      }
+    }
+  }
+
+
+
+
+
+  /*Aplica solo a la pagina Index*/
+  .contenedorMain {
+
+    .sec2,
+    .sec4 {
+      width: 94%;
+      overflow: hidden;
+    }
+  }
+
+  /*Aplica solo a la pagina Shop*/
+
+  .contenedorCards {
+    display: grid;
+    grid-template-columns: 75%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: center;
+
+    .miCard,
+    .primerCard {
+      .miImagen {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  /*Aplica solo a la pagina contacto*/
+
+  .miFormulario {
+
+    input,
+    textarea {
+      width: 90vw;
+      border: $color-primary solid 1px;
+      border-radius: 5px;
+      @include miBackground;
+      font-size: 2rem;
+    }
+  }
+
+  /*Aplica solo a la pagina ubicacion*/
+  .miMapa {
+    iframe {
+      width: 90%;
+    }
+  }
+}
+
+
+@media (min-width: 586px) and (max-width: 883px) {
+
+  /*Aplica a todas las paginas del proyecto*/
+  body {
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1.8rem;
+    }
+
+  }
+
+  /*Aplica solo a la pagina Index*/
+  .contenedorMain {
+
+    .sec2,
+    .sec4 {
+      width: 80%;
+      overflow: hidden;
+    }
+  }
+
+  /*Aplica solo a la pagina Shop*/
+
+  .contenedorCards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+
+    .miCard,
+    .primerCard {
+      .miImagen {
+        width: 90%;
+        height: 100%;
+      }
+    }
+
+
+  }
+
+  /*Aplica solo a la pagina contacto*/
+
+  .miFormulario {
+
+    input,
+    textarea {
+      width: 90vw;
+      border: $color-primary solid 1px;
+      border-radius: 5px;
+      @include miBackground;
+      font-size: 2rem;
+    }
+  }
+
+  /*Aplica solo a la pagina ubicacion*/
+  .miMapa {
+    iframe {
+      width: 80%;
+    }
+  }
+
+}
+
+@media (min-width: 884px)and (max-width: 1600px) {
+
+  /*Aplica solo a la pagina contacto*/
+
+  .miFormulario {
+
+    input,
+    textarea {
+      width: 70vw;
+      border: $color-primary solid 1px;
+      border-radius: 5px;
+      font-size: 2rem;
+    }
+  }
+
+}
