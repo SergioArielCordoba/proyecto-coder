@@ -15,5 +15,5 @@ $color-background-dos:#e9e5e1;
     background-image: linear-gradient(to right,$color-background-uno,$color-background-dos);
 }
 @mixin colorBotones{
-    background-image: linear-gradient(to right,$color-btn-primary,$color-btn-secundary);
+    background-image: radial-gradient(ellipse,$color-btn-primary,$color-btn-secundary);
 }

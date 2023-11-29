@@ -148,7 +148,7 @@ header .botonMenu {
   width: 100px;
   height: 80px;
   margin-top: 5px;
-  background-image: linear-gradient(to right, #e5f5b2, #ebb88b);
+  background-image: radial-gradient(ellipse, #e5f5b2, #ebb88b);
   color: black;
   font-size: 1.5rem;
   border-radius: 5px;
@@ -194,7 +194,7 @@ header .botonMenu {
 .miFormulario .miBoton {
   width: 150px;
   height: auto;
-  background-image: linear-gradient(to right, #e5f5b2, #ebb88b);
+  background-image: radial-gradient(ellipse, #e5f5b2, #ebb88b);
   font-size: 1.5rem;
 }
 .miFormulario input {
