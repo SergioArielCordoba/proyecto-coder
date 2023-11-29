@@ -24,7 +24,7 @@
 .contenedorFooter {
   padding-bottom: 10px;
   text-align: center;
-  background-color: $color-background-uno;
+  @include miBackground;
   
 
   div{

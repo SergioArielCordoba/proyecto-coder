@@ -1,10 +1,10 @@
 /*Funciones y variables*/
 
 $color-primary: rgb(43, 31, 31);
-$color-btn-primary:#606c38;
-$color-btn-secundary: #bc6c25;
+$color-btn-primary:#e5f5b2;
+$color-btn-secundary: #ebb88b;
 $color-background-uno: #fefae0;
-$color-background-dos:#dda15e;
+$color-background-dos:#e9e5e1;
 
 @mixin miFlex($flex-direction,$wrap){
     display: flex;
