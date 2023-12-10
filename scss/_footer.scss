@@ -1,53 +1,77 @@
 /*Estilos para el Footer*/
 
 @keyframes textoFooter {
-  0% {
-    color: $color-primary;
-  }
-
-  25% {
-    color: $color-background-dos;
-  }
-
-  50%{
-    color: $color-btn-primary;
-  }
-  75%{
+  100% {
     color: $color-btn-secundary;
-  }
-  100%{
-    color: $color-background-uno;
   }
 
 }
-
 .contenedorFooter {
+  margin-top: 30px;
   padding-bottom: 10px;
   text-align: center;
   @include miBackground;
-  
 
-  div{
+
+  .divisor {
+    @include miFlex(row, nowrap);
+
+    hr {
+      width: 40%;
+    }
+
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  div {
     .micopyright {
       animation-name: textoFooter;
       animation-duration: 4s;
       animation-iteration-count: infinite;
     }
-  
-    img{
+
+    img {
       margin-top: 10px;
       width: 250px
     }
-  
+
   }
+
   .contenedorRedesSociales {
     @include miFlex(row, nowrap);
     gap: 20px;
     justify-content: center;
-    a{
+
+    a {
       text-decoration: none;
       color: black;
     }
+  }
 
+  .infoFooter {
+    margin-top: 20px;
+
+    ul {
+      @include miFlex(row,nowrap);
+      gap: 30px;
+      justify-content: center;
+
+      list-style: none;
+
+      li {
+        a {
+          font-size: 1.5rem;
+          text-decoration: none;
+          color: black;
+
+          &:hover {
+            color: $color-btn-secundary;
+          }
+
+        }
+      }
+    }
   }
 }

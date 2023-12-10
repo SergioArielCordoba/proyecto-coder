@@ -10,6 +10,7 @@
 body {
   background-image: linear-gradient(to right, #fefae0, #e9e5e1);
   font-family: "Oswald", sans-serif;
+  text-align: center;
 }
 body h1 {
   text-align: center;
@@ -31,18 +32,24 @@ body p {
 }
 
 /*Estilos al nav*/
+/*
 @keyframes sliderLogo {
   from {
     margin-left: 500%;
+
   }
   to {
     margin-left: 0%;
+
   }
 }
+*/
 header a img {
   width: 90%;
-  animation-duration: 2s;
-  animation-name: sliderLogo;
+  transition: all 1s;
+}
+header a:hover {
+  transform: rotate(-10deg);
 }
 header a.secciones {
   text-align: center;
@@ -63,26 +70,25 @@ header .botonMenu {
 
 /*Estilos para el Footer*/
 @keyframes textoFooter {
-  0% {
-    color: rgb(43, 31, 31);
-  }
-  25% {
-    color: #e9e5e1;
-  }
-  50% {
-    color: #e5f5b2;
-  }
-  75% {
-    color: #ebb88b;
-  }
   100% {
-    color: #fefae0;
+    color: #ebb88b;
   }
 }
 .contenedorFooter {
+  margin-top: 30px;
   padding-bottom: 10px;
   text-align: center;
   background-image: linear-gradient(to right, #fefae0, #e9e5e1);
+}
+.contenedorFooter .divisor {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.contenedorFooter .divisor hr {
+  width: 40%;
 }
 .contenedorFooter div .micopyright {
   animation-name: textoFooter;
@@ -104,6 +110,25 @@ header .botonMenu {
   text-decoration: none;
   color: black;
 }
+.contenedorFooter .infoFooter {
+  margin-top: 20px;
+}
+.contenedorFooter .infoFooter ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 30px;
+  justify-content: center;
+  list-style: none;
+}
+.contenedorFooter .infoFooter ul li a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+.contenedorFooter .infoFooter ul li a:hover {
+  color: #ebb88b;
+}
 
 /*Estilos al index*/
 .contenedorMain {
@@ -112,7 +137,7 @@ header .botonMenu {
   align-items: center;
 }
 .contenedorMain .sec2, .contenedorMain .sec4 {
-  width: 40%;
+  width: 70%;
   overflow: hidden;
   border-radius: 10px;
   border: solid 3px #ebb88b;
@@ -126,32 +151,78 @@ header .botonMenu {
 }
 
 /*Estilos a la shop.*/
-.contenedorCards {
-  padding: 25px;
+.contenedorShop {
+  margin-inline: 20px;
+  margin-block: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 50px;
 }
-.contenedorCards .miCard, .contenedorCards .primerCard {
+.contenedorShop .producto {
+  border: 1px solid #ebb88b;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+}
+.contenedorShop .producto .imagenDelProducto {
+  width: 50%;
+  height: auto;
+}
+.contenedorShop .producto .imagenDelProducto img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.contenedorShop .producto .descripcionDelProducto {
   display: flex;
   flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.contenedorShop .producto .descripcionDelProducto h2 {
+  font-size: 2.5vw;
+}
+.contenedorShop .producto .descripcionDelProducto p {
+  font-size: 1.8vw;
+}
+.contenedorShop .producto .descripcionDelProducto .precio {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
   align-items: center;
 }
-.contenedorCards .miCard .miImagen, .contenedorCards .primerCard .miImagen {
-  width: 60%;
-  height: 100%;
-  border-radius: 10px;
-  border: #ebb88b solid 3px;
+.contenedorShop .producto .descripcionDelProducto .precio .oferta {
+  font-family: "Fraunces", serif;
+  font-size: 2vw;
+  color: green;
 }
-.contenedorCards .miCard .miBoton, .contenedorCards .primerCard .miBoton {
-  width: 100px;
-  height: 80px;
-  margin-top: 5px;
-  background-image: radial-gradient(ellipse, #e5f5b2, #ebb88b);
-  color: black;
-  font-size: 1.5rem;
+.contenedorShop .producto .descripcionDelProducto .precio .precioNormal {
+  font-family: "Fraunces", serif;
+  font-size: 1.2vw;
+  text-decoration: line-through;
+  color: red;
+}
+.contenedorShop .producto .descripcionDelProducto button {
+  width: 60%;
+  margin: 10px;
   border-radius: 5px;
+  background-image: radial-gradient(ellipse, #e5f5b2, #ebb88b);
+  text-align: center;
+}
+.contenedorShop .producto .descripcionDelProducto button:hover {
+  opacity: 0.5;
+}
+.contenedorShop .producto .descripcionDelProducto button span {
+  font-size: 1.5vw;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 900;
+}
+.contenedorShop .producto .descripcionDelProducto button span:hover {
+  color: darkorange;
 }
 
 /*Aplico estilos a la page Taller*/
@@ -185,40 +256,68 @@ header .botonMenu {
 
 /*Aplico estilos a la pagina Contacto*/
 .miFormulario {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  row-gap: 5px;
+  margin: auto;
+  border: 1px solid #ebb88b;
+  border-radius: 10px;
+  width: 60%;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  overflow: hidden;
   align-items: center;
 }
-.miFormulario .miBoton {
-  width: 150px;
+.miFormulario label {
+  width: 100%;
   height: auto;
-  background-image: radial-gradient(ellipse, #e5f5b2, #ebb88b);
   font-size: 1.5rem;
 }
 .miFormulario input {
-  width: 40vw;
-  border: rgb(43, 31, 31) solid 1px;
-  border-radius: 5px;
-  background-image: linear-gradient(to right, #fefae0, #e9e5e1);
-  font-size: 2rem;
+  width: 80%;
+  height: auto;
+  font-size: 1.3rem;
+  border-radius: 6px;
+  border: 1px solid #ebb88b;
 }
 .miFormulario textarea {
-  width: 40vw;
-  border: rgb(43, 31, 31) solid 1px;
-  border-radius: 5px;
-  background-image: linear-gradient(to right, #fefae0, #e9e5e1);
-  font-size: 2rem;
+  font-size: 1.3rem;
+  width: 80%;
+  height: 100%;
+  border-radius: 6px;
+  border: 1px solid #ebb88b;
+}
+.miFormulario .imagenIcono i {
+  font-size: 2em;
+}
+.miFormulario .botonera {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  column-gap: 10px;
+}
+.miFormulario .botonera .miBoton,
+.miFormulario .botonera .miBorrar {
+  border: 1px solid #ebb88b;
+  border-radius: 6px;
+  width: 150px;
+  background-image: radial-gradient(ellipse, #e5f5b2, #ebb88b);
+}
+.miFormulario .botonera .miBoton:hover,
+.miFormulario .botonera .miBorrar:hover {
+  opacity: 0.4;
 }
 
 /*Aplico estilos a la pagina ubicacion*/
 .miMapa {
   text-align: center;
 }
+.miMapa iframe {
+  width: 70%;
+}
 
 .miHorario .diasYHorarios, .miHorario h2 {
-  text-align: center;
   font-size: 1rem;
 }
 .miHorario h2 {
@@ -245,9 +344,18 @@ header .botonMenu {
     width: 70%;
   }
   /*Aplica a todas las paginas del proyecto*/
-  .contenedorFooter div img {
-    margin-top: 10px;
-    width: 200px;
+  .contenedorFooter .infoFooter ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    list-style: none;
+    gap: 5px;
+  }
+  .contenedorFooter .infoFooter ul li a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
   }
   /*Aplica solo a la pagina Index*/
   .contenedorMain .sec2,
@@ -256,32 +364,64 @@ header .botonMenu {
     overflow: hidden;
   }
   /*Aplica solo a la pagina Shop*/
-  .contenedorCards {
+  .contenedorShop {
     display: grid;
-    grid-template-columns: 75%;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 90%;
+    grid-template-rows: auto;
     justify-content: center;
   }
-  .contenedorCards .miCard .miImagen,
-  .contenedorCards .primerCard .miImagen {
+  .contenedorShop .producto {
+    display: flex;
+    flex-direction: column;
+  }
+  .contenedorShop .producto .imagenDelProducto {
     width: 100%;
-    height: 100%;
+    height: 60%;
+    object-fit: cover;
+  }
+  .contenedorShop .producto .descripcionDelProducto p {
+    display: none;
+  }
+  .contenedorShop .producto .descripcionDelProducto h2 {
+    font-size: 7vw;
+  }
+  .contenedorShop .producto .descripcionDelProducto .precio .oferta {
+    font-size: 5vw;
+  }
+  .contenedorShop .producto .descripcionDelProducto .precio .precioNormal {
+    font-size: 3vw;
+  }
+  .contenedorShop .producto .descripcionDelProducto button {
+    height: 25%;
+  }
+  .contenedorShop .producto .descripcionDelProducto button span {
+    font-size: 3vw;
   }
   /*Aplica solo a la pagina contacto*/
-  .miFormulario input,
-  .miFormulario textarea {
-    width: 90vw;
-    border: rgb(43, 31, 31) solid 1px;
-    border-radius: 5px;
-    background-image: linear-gradient(to right, #fefae0, #e9e5e1);
-    font-size: 2rem;
+  .miFormulario {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 90%;
+  }
+  .miFormulario label, .miFormulario input, .miFormulario textarea {
+    width: 96%;
+  }
+  .miFormulario label {
+    text-align: start;
+  }
+  .miFormulario .imagenIcono {
+    display: none;
+  }
+  .miFormulario .botonera {
+    margin: 10px;
   }
   /*Aplica solo a la pagina ubicacion*/
   .miMapa iframe {
     width: 90%;
   }
 }
-@media (min-width: 586px) and (max-width: 883px) {
+@media (min-width: 586px) and (max-width: 981px) {
   /*Aplica a todas las paginas del proyecto*/
   body h1 {
     font-size: 3rem;
@@ -301,40 +441,48 @@ header .botonMenu {
     width: 80%;
     overflow: hidden;
   }
+  /*Aplica a todas las paginas del proyecto*/
+  .contenedorFooter .infoFooter ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 5px;
+    justify-content: center;
+    list-style: none;
+  }
+  .contenedorFooter .infoFooter ul li a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: black;
+  }
   /*Aplica solo a la pagina Shop*/
-  .contenedorCards {
+  .contenedorShop {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 70%;
+    grid-template-rows: auto;
     justify-content: center;
   }
-  .contenedorCards .miCard .miImagen,
-  .contenedorCards .primerCard .miImagen {
-    width: 90%;
-    height: 100%;
+  .contenedorShop .producto .descripcionDelProducto h2 {
+    font-size: 5vw;
   }
-  /*Aplica solo a la pagina contacto*/
-  .miFormulario input,
-  .miFormulario textarea {
-    width: 90vw;
-    border: rgb(43, 31, 31) solid 1px;
-    border-radius: 5px;
-    background-image: linear-gradient(to right, #fefae0, #e9e5e1);
-    font-size: 2rem;
+  .contenedorShop .producto .descripcionDelProducto p {
+    display: none;
+  }
+  .contenedorShop .producto .descripcionDelProducto .precio .precioNormal {
+    font-size: 1.5vw;
+  }
+  .contenedorShop .producto .descripcionDelProducto .precio .oferta {
+    font-size: 3vw;
+  }
+  .contenedorShop .producto .descripcionDelProducto button {
+    height: 25%;
+  }
+  .contenedorShop .producto .descripcionDelProducto button span {
+    font-size: 2vw;
   }
   /*Aplica solo a la pagina ubicacion*/
   .miMapa iframe {
     width: 80%;
-  }
-}
-@media (min-width: 884px) and (max-width: 1600px) {
-  /*Aplica solo a la pagina contacto*/
-  .miFormulario input,
-  .miFormulario textarea {
-    width: 70vw;
-    border: rgb(43, 31, 31) solid 1px;
-    border-radius: 5px;
-    font-size: 2rem;
   }
 }
 

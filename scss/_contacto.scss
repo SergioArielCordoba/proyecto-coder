@@ -1,35 +1,62 @@
 /*Aplico estilos a la pagina Contacto*/
 
 .miFormulario {
+  margin: auto;
+  border: 1px solid $color-btn-secundary;
+  border-radius: 10px;
+  width: 60%;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  overflow: hidden;
+  align-items: center;
 
-    @include miFlex(column,nowrap);
-    row-gap: 5px;
-    align-items: center;
-  
-    .miBoton {
+  label {
+    width: 100%;
+    height: auto;
+    font-size: 1.5rem;
+
+  }
+
+  input {
+    width: 80%;
+    height: auto;
+    font-size: 1.3rem;
+    border-radius: 6px;
+    border: 1px solid $color-btn-secundary;
+  }
+
+  textarea {
+    font-size: 1.3rem;
+    width: 80%;
+    height: 100%;
+    border-radius: 6px;
+    border: 1px solid $color-btn-secundary;
+  }
+
+  .imagenIcono {
+    i {
+      font-size: 2em;
+    }
+  }
+
+  .botonera {
+    width: 80%;
+    @include miFlex(row, nowrap);
+    justify-content: center;
+    column-gap: 10px;
+
+    .miBoton,
+    .miBorrar {
+      border: 1px solid $color-btn-secundary;
+      border-radius: 6px;
       width: 150px;
-      height: auto;
       @include colorBotones;
-      font-size: 1.5rem;
-    }
-  
-    input {
-      width: 40vw;
-      border: $color-primary solid 1px;
-      border-radius: 5px;
-      @include miBackground;
-      font-size: 2rem;
-    }
-  
-    textarea {
-        width: 40vw;
-        border: $color-primary solid 1px;
-        border-radius: 5px;
-        @include miBackground;
-        font-size: 2rem;
+
+      &:hover {
+        opacity: (0.4);
       }
-
+    }
+  }
 }
-  
-
-  

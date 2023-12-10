@@ -1,33 +1,80 @@
 /*Estilos a la shop.*/
 
-.contenedorCards{
-    padding: 25px;
+.contenedorShop {
+    margin-inline: 20px;
+    margin-block: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 10px;
-
-    .miCard, .primerCard{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .miImagen{
-            width: 60%;
-            height: 100%;
-            border-radius: 10px;
-            border: $color-btn-secundary solid 3px;
-        }
-        .miBoton{
-            width: 100px;
-            height: 80px;
-            margin-top: 5px;
-            @include colorBotones;
-            color: black;
-            font-size: 1.5rem;
-            border-radius: 5px;
-        }
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap:50px;
     
-    }
+    .producto {
+        border: 1px solid $color-btn-secundary;
+        border-radius: 10px;
+        overflow: hidden;
+        display: flex;
+        
+        .imagenDelProducto {
+            width: 50%;
+            height: auto;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: fill;
+            }
+        }
+        .descripcionDelProducto {
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
 
+            h2{
+                font-size: 2.5vw;
+            }
+            p{
+                font-size: 1.8vw;
+            }
+            .precio {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                align-items: center;
+
+                .oferta {
+                    font-family: 'Fraunces', serif;
+                    font-size: 2vw;
+                    color: green;
+                }
+
+                .precioNormal {
+                    font-family: 'Fraunces', serif;
+                    font-size: 1.2vw;
+                    text-decoration: line-through;
+                    color: red;
+                }
+            }
+            button {
+                width: 60%;
+                margin: 10px;
+                border-radius: 5px;
+                @include colorBotones;
+                text-align: center;
+                &:hover{
+                    opacity: (0.5);
+                }
+                span {
+                    font-size: 1.5vw;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-weight: 900;
+                    &:hover {
+                        color: darkorange;
+                    }
+                }
+            }
+        }
+    }
 }

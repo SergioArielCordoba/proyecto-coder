@@ -28,20 +28,27 @@
       width: 70%;
     }
   }
+
   /*Aplica a todas las paginas del proyecto*/
 
   .contenedorFooter {
-    div{
-      img{
-        margin-top: 10px;
-        width: 200px;
+    .infoFooter {
+      ul {
+        @include miFlex(column, nowrap);
+        justify-content: center;
+        list-style: none;
+        gap: 5px;
+
+        li {
+          a {
+            font-size: 1.2rem;
+            text-decoration: none;
+            color: black;
+          }
+        }
       }
     }
   }
-
-
-
-
 
   /*Aplica solo a la pagina Index*/
   .contenedorMain {
@@ -55,32 +62,59 @@
 
   /*Aplica solo a la pagina Shop*/
 
-  .contenedorCards {
+  .contenedorShop{
     display: grid;
-    grid-template-columns: 75%;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 90%;
+    grid-template-rows: auto;
     justify-content: center;
-
-    .miCard,
-    .primerCard {
-      .miImagen {
+    .producto{
+      display: flex;
+      flex-direction: column;
+      .imagenDelProducto {
         width: 100%;
-        height: 100%;
+        height: 60%;
+        object-fit: cover;
+      }
+      .descripcionDelProducto{
+        p{
+          display: none;
+        }
+        h2{
+          font-size: 7vw;
+        }
+        .precio{
+          .oferta {
+            font-size: 5vw;
+          }
+          .precioNormal {
+            font-size: 3vw;
+          }
+        }
+        button{
+          height: 25%;
+          span{
+            font-size: 3vw;
+          }
+        }
       }
     }
   }
-
   /*Aplica solo a la pagina contacto*/
 
   .miFormulario {
-
-    input,
-    textarea {
-      width: 90vw;
-      border: $color-primary solid 1px;
-      border-radius: 5px;
-      @include miBackground;
-      font-size: 2rem;
+    @include miFlex(column,nowrap);
+    width: 90%;
+    label,input,textarea{
+      width: 96%;
+    }
+    label{
+      text-align: start;
+    }
+    .imagenIcono{
+      display: none;
+    }
+    .botonera{
+      margin: 10px;
     }
   }
 
@@ -93,7 +127,7 @@
 }
 
 
-@media (min-width: 586px) and (max-width: 883px) {
+@media (min-width: 586px) and (max-width: 981px) {
 
   /*Aplica a todas las paginas del proyecto*/
   body {
@@ -125,36 +159,62 @@
     }
   }
 
-  /*Aplica solo a la pagina Shop*/
+  /*Aplica a todas las paginas del proyecto*/
 
-  .contenedorCards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    justify-content: center;
+  .contenedorFooter {
+    .infoFooter {
+      ul {
+        @include miFlex(column, nowrap);
+        gap: 5px;
+        justify-content: center;
+        list-style: none;
 
-    .miCard,
-    .primerCard {
-      .miImagen {
-        width: 90%;
-        height: 100%;
+        li {
+          a {
+            font-size: 1.5rem;
+            text-decoration: none;
+            color: black;
+          }
+        }
       }
     }
-
-
   }
 
-  /*Aplica solo a la pagina contacto*/
+  /*Aplica solo a la pagina Shop*/
 
-  .miFormulario {
+  .contenedorShop {
+    display: grid;
+    grid-template-columns: 70%;
+    grid-template-rows: auto;
+    justify-content: center;
+    
+    .producto {
+      .descripcionDelProducto {
+        h2 {
+          font-size: 5vw;
+        }
 
-    input,
-    textarea {
-      width: 90vw;
-      border: $color-primary solid 1px;
-      border-radius: 5px;
-      @include miBackground;
-      font-size: 2rem;
+        p {
+          display: none;
+        }
+
+        .precio {
+          .precioNormal {
+            font-size: 1.5vw;
+          }
+
+          .oferta {
+            font-size: 3vw;
+          }
+        }
+        button{
+          height: 25%;
+          span{
+            font-size: 2vw;
+          }
+        }
+
+      }
     }
   }
 
@@ -164,22 +224,4 @@
       width: 80%;
     }
   }
-
-}
-
-@media (min-width: 884px)and (max-width: 1600px) {
-
-  /*Aplica solo a la pagina contacto*/
-
-  .miFormulario {
-
-    input,
-    textarea {
-      width: 70vw;
-      border: $color-primary solid 1px;
-      border-radius: 5px;
-      font-size: 2rem;
-    }
-  }
-
 }
